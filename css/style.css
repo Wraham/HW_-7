@@ -1,0 +1,144 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing:border-box;
+  font-family: 'Lucida Sans',Verdana, sans-serif;
+}
+.container{
+  width: 1170px;
+  margin: auto;
+}
+nav{
+  background-color: #db6211;
+}
+nav ul{
+  list-style-type: none;
+  text-align: center;
+  padding: 3px 0 0 0;
+}
+nav ul li{
+  display: inline-block;
+  position: relative;
+}
+nav ul li a{
+  padding: 10px;
+  display: inline-block;
+  color: #ebeff3;
+  text-decoration: none; 
+}
+nav ul li a:hover{
+  background-color: #f5f4f3;
+  color: #EF4A23;
+}
+
+nav .menu{
+  background-color: #6d6b6a;
+  position: absolute;
+  text-align: left;
+  left: 0;
+  top: 100%;
+  width: 200px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s, visibility 0.5s ease;
+
+}
+nav .dropdown{
+  position: relative;
+}
+nav .dropdown:hover .menu{
+  opacity: 1;
+  visibility: visible;
+}
+nav .menu li a{
+  width: 200px;  
+}
+nav .menu li a:hover{
+  background-color: #a19d9b;
+  color: #0c0c0b;
+}
+nav .menu .link a:hover {
+  text-decoration: underline;
+}
+
+
+nav .menu2 {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #FFFFFF;
+  position: absolute;
+  text-align: left;
+  left: 0;
+  top: 100%;
+  width: 300px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s, visibility 0.5s ease;
+}
+nav .menu2 .colm {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+nav .menu2 .colm a {
+  padding: 10px;
+  color: #456075;
+  text-decoration: none;
+}
+nav .menu2 .colm a:hover {
+  background-color: #7c8592;
+}
+nav .dropdown:hover .menu2 {
+  opacity: 1;
+  visibility: visible;
+}
+
+nav .dropdown{
+  position: relative;
+}
+nav .dropdown:hover::after{
+  width: 100%;
+  transition: 0.5s;
+}
+nav .dropdown::after{
+  content: '';
+  width: 0%;
+  height: 3px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background-color: #177d8f;
+}
+
+nav .sidemenu{
+  background-color: #FFFFFF;
+  position: absolute;
+  left: 100%;
+  top: 0;
+  width: 150px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s, visibility 0.5s;
+  box-shadow: 0 1px 1px 1px #cbcccc;
+}
+nav .sidebar{
+  position: relative;
+  
+}
+nav .sidebar:hover .sidemenu{
+  opacity: 1;
+  visibility: visible;
+}
+nav .sidemenu li a{
+  width: 150px;
+  text-align: left;
+  color: black;
+}
+
+.bg{
+  padding: 20px 0;
+  background-color: #C2C3C7;
+  height: auto;
+  width: 100%;
+  text-align: center;
+}
